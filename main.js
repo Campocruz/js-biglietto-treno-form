@@ -3,6 +3,7 @@ const nameEl = document.getElementById('inputName');
 const kmEl = document.getElementById('inputKm');
 const ageEl = document.getElementById('inputAge');
 const formEl = document.querySelector('form');
+const containerCardEl = document.getElementById('container-card');
 
 // Constant
 const costKm = 0.21;
@@ -14,7 +15,12 @@ formEl.addEventListener('submit', (e) => {
   const name = nameEl.value;
   const km = kmEl.value;
   const age = ageEl.value;
-  calcKm(age, km);
+  const price = calcKm(age, km);
+  const ticketCard = document.createElement('div');
+  ticketCard.classList.add('card');
+  ticketCard.innerHTML = 'test';
+  containerCardEl.appendChild(ticketCard);
+  console.log(price);
 })
 
 
@@ -28,5 +34,5 @@ function calcKm(age, km) {
   } else {
     price = (costKm * km)
   }
-  console.log(price.toFixed(2) + '€');
+  return price.toFixed(2)
 }
