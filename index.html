@@ -1,20 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Your Ticket Train</title>
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="./asset/css/style.css">
-
 </head>
+
 <body>
   <header>
-
+    <div class="container text-center text-uppercase text-white p-2">
+      <h1>calcola il prezzo del tuo biglietto</h1>
+    </div>
   </header>
 
   <main>
-
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body text-center">
+              <form class="row g-3 ">
+                <div class="col-md-4">
+                  <label for="inputName" class="form-label">Nome Cognome</label>
+                  <input type="text" class="form-control" id="inputName">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputKm" class="form-label">Km da percorrere</label>
+                  <input type="text" class="form-control" id="inputKm">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputAge" class="form-label">Fascia d'età</label>
+                  <select id="inputAge" class="form-select">
+                    <option>Minorenne</option>
+                    <option selected>Maggiorenne</option>
+                    <option>Over 65</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-secondary" id="btnSubmit">Genera</button>
+                  <button type="" class="btn btn-secondary">Annulla</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-3">
+          <div class="text-center text-white text-uppercase">
+            <h2>il tuo biglietto</h2>
+          </div>
+          <div class="card">
+            <div class="card-header">DETTAGLIO PASSEGGERI</div>
+            <div class="card-body">
+              <div class="row bg-secondary">
+                <div class="col-3">
+                  <div class="p-2">
+                    <strong>NOME PASSEGGERO</strong>
+                    <p>js</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
@@ -23,4 +77,31 @@
 
   <script src="./main.js"></script>
 </body>
+
 </html>
+
+<!-- <div class="card">
+  <div class="card-body">
+    <form action="">
+      <div class="row text-center">
+        <div class="col-4">
+          <label for="inputName">Nome Cognome</label>
+          <input type="text" name="inputName">
+        </div>
+        <div class="col-4">
+          <label for="inputKm">Km da percorrere</label>
+          <input type="text" name="inputKm">
+        </div>
+        <div class="col-4">
+          <label for="inputAge">Fascia d'età</label>
+          <select name="inputAge" id="">
+            <option value="">Maggiorenne</option>
+            <option value="">Over 65</option>
+          </select>
+        </div>
+        <button>Genera</button>
+        <button>Annulla</button>
+      </div>
+    </form>
+  </div>
+</div> -->
