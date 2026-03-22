@@ -1,12 +1,21 @@
-*
-{
+* {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: pink;
 }
 
+.ticket {
+  height: 10rem;
+
+  >.card-body {
+    background-image: url('../img/paper_background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0px -10px;
+  }
+}
